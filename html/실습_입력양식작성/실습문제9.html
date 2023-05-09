@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        label.title{
+            font-weight: bold;
+
+        }
+        fieldset{
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>회원가입</h1>
+
+    <form action="">
+
+        <fieldset>
+
+
+            <!-- table에 border 형식을 주지 않으면 칸 없이 줄맞춰 할 수 있음-->
+        <table>
+
+            
+            <tr>
+                <th>ID</th>
+                <td><input type="text" name="id" id="id" placeholder="아이디 10글자 이내" maxlength="10" size="30"> <input type="submit" value="중복확인"></td>
+                
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="pw" id="pw" placeholder="영문,숫자,특수문자 포함 8자 이상"size="30" ></td>
+
+            </tr>
+            <th>비밀번호 확인</th>
+            <td><input type="password" name="pw" id="pw"></td>
+            
+            
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" id="eamil"> <select name="select" id="select">
+                    <option value="직접입력">직접입력</option>
+                    <option value="@naver.com">@naver.com</option>
+                    <option value="@google.com">@google.com</option>
+                </select></td> 
+                
+            </tr>
+
+        </table>
+
+    </fieldset>
+        <br>
+        <fieldset>
+
+            <legend>추가정보</legend>
+
+            <li>프로필 사진 : <input type="file" name="" id=""></li>
+            <br>
+            <li>성별 : <input type="radio" name="gender" id="man">남자 <input type="radio" name="gender" id="wo">여자</li>
+            <br>
+            <li>생년월일 : <input type="date" id="date"></li>
+            <br>
+            <li>취미 : <br> <input type="checkbox" name="bas">야구
+                <input type="checkbox" name="bak">농구
+                <input type="checkbox" name="soc">축구<br>
+                <input type="checkbox" name="study">공부
+                <input type="checkbox" name="music">음악감상<br>
+                <input type="checkbox" name="else">기타
+            </li>
+
+            <br>
+            자기소개
+            <input type="text">
+
+
+        </fieldset>
+
+        <br>
+        <input type="submit" name="회원가입" id="a" value="회원가입">
+        <input type="submit" name="다시입력" id="b" value="다시입력">
+        <input type="submit" name="이전으로" id="c" value="이전으로">
+
+
+
+
+    </form>
+
+</body>
+
+</html>
