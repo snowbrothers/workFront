@@ -10,11 +10,13 @@
         li {
             list-style: none;
         }
-        label.title{
+
+        label.title {
             font-weight: bold;
 
         }
-        fieldset{
+
+        fieldset {
             width: 700px;
         }
     </style>
@@ -30,67 +32,94 @@
 
 
             <!-- table에 border 형식을 주지 않으면 칸 없이 줄맞춰 할 수 있음-->
-        <table>
+            <table>
 
-            
-            <tr>
-                <th>ID</th>
-                <td><input type="text" name="id" id="id" placeholder="아이디 10글자 이내" maxlength="10" size="30"> <input type="submit" value="중복확인"></td>
-                
-            </tr>
-            <tr>
-                <th>비밀번호</th>
-                <td><input type="password" name="pw" id="pw" placeholder="영문,숫자,특수문자 포함 8자 이상"size="30" ></td>
 
-            </tr>
-            <th>비밀번호 확인</th>
-            <td><input type="password" name="pw" id="pw"></td>
-            
-            
-            <tr>
-                <th>Email</th>
-                <td><input type="email" name="email" id="eamil"> <select name="select" id="select">
-                    <option value="직접입력">직접입력</option>
-                    <option value="@naver.com">@naver.com</option>
-                    <option value="@google.com">@google.com</option>
-                </select></td> 
-                
-            </tr>
+                <tr>
+                    <!-- label for="연결할 id값 입력"  -->
+                    <th><label for="userId">ID</label></th>
+                    <td><input type="text" name="userId" id="userId" placeholder="아이디 10글자 이내" maxlength="10" size="30">
+                        <input type="submit" value="중복확인"></td>
 
-        </table>
+                </tr>
 
-    </fieldset>
+                <tr>
+                    <th><label for="userPw">비밀번호</label></th>
+                    <td><input type="password" name="userPw" id="userPw" placeholder="영문,숫자,특수문자 포함 8자 이상" size="30">
+                    </td>
+
+                </tr>
+                <th><label for="pwcheck">비밀번호 확인</label></th>
+                <td><input type="password" name="pwcheck" id="pwcheck"></td>
+
+
+                <tr>
+                    <th><label for="email">Email</label></th>
+                    <td><input type="email" name="email" id="email">
+                        <select name="emailAddr" id="emailAddr">
+                            <option value="etc" selected>직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </fieldset>
         <br>
         <fieldset>
 
+            <ul>
             <legend>추가정보</legend>
 
-            <li>프로필 사진 : <input type="file" name="" id=""></li>
+            <li>
+            <label for="addfile">프로필 사진 : </label> 
+            <input type="file" name="addfile" id="addfile"></li>
             <br>
-            <li>성별 : <input type="radio" name="gender" id="man">남자 <input type="radio" name="gender" id="wo">여자</li>
+
+            <li><label for="gender">성별 : </label> 
+                        <input type="radio" name="gender" id="gender" value="M">남자 
+                        <input type="radio" name="gender" id="gender" value="W">여자
+                    </li>
             <br>
-            <li>생년월일 : <input type="date" id="date"></li>
-            <br>
-            <li>취미 : <br> <input type="checkbox" name="bas">야구
-                <input type="checkbox" name="bak">농구
-                <input type="checkbox" name="soc">축구<br>
-                <input type="checkbox" name="study">공부
-                <input type="checkbox" name="music">음악감상<br>
-                <input type="checkbox" name="else">기타
+
+            <li><label for="birth">생년월일 :</label>   
+                <input type="birth" id="birth"></li>
+                <br>
+            
+                <li>
+                    취미 : <br> 
+                <input type="checkbox" name="hobby" id="hobby1" value="baseball"><label for="hobby1">야구</label>
+                <input type="checkbox" name="hobby" id="hobby2" value="basketball"><label for="hobby2">농구</label>
+                <input type="checkbox" name="hobby" id="hobby3" value="football"><label for="hobby3">축구</label><br>
+                <input type="checkbox" name="hobby" id="hobby4" value="study"><label for="hobby4">공부</label>
+                <label for="hobby5"><input type="checkbox" name="hobby" id="hobby5" value="lestening">음악감상</label><br>
+                <label for="hobby6"><input type="checkbox" name="hobby" id="hobby6" value="etc">기타 : <input type="text"></label>
             </li>
 
-            <br>
-            자기소개
-            <input type="text">
+            
+        
+            
 
+            <br>
+            <li>
+            <label for="introduce">자기소개</label>
+            <br>
+            <textarea name="intoriduce" id="introduce" cols="50" rows="5" style="resize:none;"></textarea>
+            </li>
+        </ul>
 
         </fieldset>
 
-        <br>
-        <input type="submit" name="회원가입" id="a" value="회원가입">
-        <input type="submit" name="다시입력" id="b" value="다시입력">
-        <input type="submit" name="이전으로" id="c" value="이전으로">
 
+        <p>
+            <input type="submit" name="회원가입" id="a" value="회원가입">
+            <input type="reset" name="다시입력" id="b" value="다시입력">
+            <input type="button" name="이전으로" id="c" value="이전으로">
+
+        </p>
 
 
 

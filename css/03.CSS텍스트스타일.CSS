@@ -1,0 +1,250 @@
+
+         #f1{
+            font-family: "궁서체";
+         }
+
+         #f2{
+            font-family: "굴림체";
+         }
+
+         /* 
+         글꼴이 없는 경우를 대비해서
+         글꼴이 없는 경우 , 를 이용하여 여러 글꼴을 나열 할 수 있음 */
+         
+         #f3{
+            font-family: "없는글꼴", "궁서>ㅇ<","고딕";
+         }
+
+
+         /* 웹폰트 */
+         /*  임포트 받은 후 사용이 가능하다. */
+         @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+         h1{
+            font-family: 'Gowun Batang', serif;
+         }
+
+         .web-font{
+            font-family: 'Gowun Batang', serif;
+         }
+
+       
+
+         #size1{
+            font-size: 10px;
+         }
+
+         #size2{
+            font-size: 4em;
+         }
+
+
+         #size3{
+            font-size: 150%;
+         }
+
+         #fw1{
+            font-weight: bold;
+         }
+
+         #fw2{
+            font-weight: lighter;
+         }
+
+         #fw3{
+            font-weight: 500px;
+         }
+
+         #fv{
+            
+            /*  
+                small-caps : 소문자를 대문자로 바꿉니다.
+                normar : 바꾸지 않음
+            */
+
+            font-variant: small-caps;
+         }
+
+         #fs1{
+            font-style: italic;
+         }
+
+         #fs2{
+            font-style: oblique;
+         }
+
+
+
+         /* 글자색 변경하기 
+                
+            - 색상이름 표기법
+            - 16진수 표기법
+            - rgb/rgba 표기법
+            - hsl/hsla 표기법
+
+        */
+
+
+         #c-name{
+
+            /*
+                이름으로 지정
+                16가지 기본색상을 포함 216가지
+            */
+
+            color: red;
+         }
+
+         #c-16{
+            
+            /*
+
+            #과 16진수 6자리를 합쳐서 색상을 표현
+            앞에서부터 2자리씩 묶어 빨강, 초록, 파랑 색상의 양을 표시
+            ( 중복된 숫자인 경우 3자리로 표현 #000000 -> #000 )
+        
+            */
+        
+            background-color:#000;
+            color: #fff;
+            padding: 20px;
+            font-size: 2em;
+         }
+
+         #c-rgb{
+            /*
+                빨강 초록 파랑의 양을 0~255 까지의 수로 표현
+            */
+            color: rgb(255,200,0);
+         }
+
+         #c-rgba{
+            
+            /*
+                
+                a : 투명도
+                0 ~ 1 까지
+                0: 투명, 1: 불투명
+
+            */
+
+            /*
+                hsl방식
+                색상(hue), 채도(saturation), 밝기(light)
+            */
+
+            
+            background-color: #000;
+            color:rgb(255,200,0,0.5)
+            
+         }
+
+         #td-none{
+            text-decoration: none;
+         }
+         #td-underline{
+            text-decoration: underline;
+         }
+         #td-overline{
+            text-decoration: overline;
+         }
+         #td-line-throught{
+            text-decoration: line-through;
+         }
+         #testlink{
+            text-decoration: none;
+            color: #666;
+            font-size: 1.5em;
+         }
+
+         li{
+            padding: 20px;
+            /* 선의 두께, 선 스타일, 색상 */
+            
+            border: 1px dotted #0000;
+            
+
+         }
+
+         #ts1{
+            font-size: 1.5em;
+            font-weight: 900;
+            text-shadow: 1px 1px 5px blue;  
+               }
+
+        #ts2{
+            text-shadow: -10px -10px 3px rgb(255,0,0);
+        }
+
+        #ts3{
+            text-shadow: 10px 10px gold;
+        }
+
+
+        #tt1{
+            text-transform: none;
+        }
+
+        #tt2{
+            text-transform: capitalize;
+        }
+
+        #tt3{
+            text-transform: uppercase;
+        }
+
+        #tt4{
+            text-transform: lowercase;
+        }
+
+        .lh1{
+         font-size: 1em;
+         /* 줄간격 */
+         line-height: 1em;
+         /* 가로 정렬 */
+         text-align: left;
+        }
+
+        .lh2{
+         font-size: 1em;
+         line-height: 2em;
+         text-align: right;
+        }
+
+        .lh3{
+         font-size: 1em;
+         line-height: 0.5em;
+         text-align: center;
+        }
+
+        .lh4{
+         font-size: 1em;
+         line-height: 3em;
+         text-align: justify;
+
+        }
+
+        table{
+         /* 캡션의 위치 (기본:top) */
+         caption-side: bottom;
+         border: 1px solid #999;
+
+            /* 테두리를 한줄로 표시 */
+            border-collapse: collapse;
+
+        }
+
+        th,tr,td{
+
+         border: 1px dotted #999;
+         padding: 10px;
+      
+        }
+        
+
+        
+
+    
+   
+
+
+
