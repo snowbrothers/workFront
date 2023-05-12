@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+
+        body{
+            
+            height: 100vw;
+            
+
+                    }
+
+        #container{
+            width: 500px;
+            height: 500px;
+            background-image: url(images/apple-bg.jpg);
+            background-repeat: no-repeat; 
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            
+            font-size: 5em;
+
+            border: 30px dotted #ccc;
+            /*border 영역까지 포함하여 배경화면 출력 */
+            /* background-clip: border-box;
+            background-clip: padding-box; */
+            background-clip: content-box;
+            padding: 30px;
+            background-clip: text;-webkit-background-clip: text;color: transparent;
+            
+        }
+
+        ul{
+            list-style: none;
+
+        }
+
+        li{
+            /* border: 1px solid black; */
+            /* 배경이미지 지정 */
+            background-image: url(images/bg3.jpg );
+            /* 반복제거 */
+            background-repeat: no-repeat;
+            /* 위치지정 */
+            /* 수평 : left center right 백분율 길이값 */
+            /* 수직 : top center bottom 백분률 길이값*/
+            background-position: left center;
+            /* 줄간격 */
+            line-height: 40px;
+            padding-left: 170px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        
+        텍스트
+
+    </div>
+
+    <h1>이지스퍼블리싱</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>동영상강의</li>
+    </ul>
+
+
+
+</body>
+</html>
