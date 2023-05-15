@@ -1,0 +1,71 @@
+
+    /* section 태그 안에 위치한 h1 태그 선택 */
+    section h1{
+        background-color: black;
+        color: wheat;
+        padding-left: 10px;
+        }
+
+        /* 자식만 선택 ! a > b */
+        section > p{
+            
+            font-size: 1.2em;
+            font-weight: 700;
+                        
+        }
+
+        /* 인접선택자 */
+        #div-test + div {
+
+            background-color: rgb(18, 80, 37);
+            color: aliceblue;
+
+        }
+
+        #div-test ~ div{
+            font-weight: 700;
+            /* color: #462bf1; */
+            font-style: italic;
+        }
+
+        #family + p{
+            font-weight: 700;
+            color: blue;
+        }
+        
+        /* 속성선택자 
+        선택자[속성] */
+        
+        
+        
+        /* id 속성을 가진 요소를 선택 */
+        .div-class[id]{
+            border: 1px solid black;
+        }
+
+        .div-class[id=name1]{
+            border: 2px solid rgb(219, 23, 23);
+        }
+
+
+        
+        /* div 중에 class 속성에서 class 로 시작되는 태그 */
+        div[class^="class"]{
+            color: red;
+        }
+
+        /* id 속성의 값이 name 을 포함하는 */
+        .class-div[id*=name]{
+            background-color: rgb(21, 216, 86);
+        }
+
+        /* class속성의 값이 class 로 끝나는 */
+        div[class$=class]{
+            padding: 20px;
+        }
+
+        /* class속성의 값에 p20이 포함 되어 있는 경우
+        (속성값이 띄어쓰기로 구분) */
+        div[class~=p40]{
+           padding-left: 40px;
+        }
