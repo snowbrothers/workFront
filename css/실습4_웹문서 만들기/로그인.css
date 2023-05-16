@@ -1,0 +1,69 @@
+#login_wr
+p{
+    
+    width: 250px;
+    height: 60px;
+  
+    background-color: aquamarine;
+}
+
+#login_form{
+    
+    height: 100%;
+}
+
+#login_form_input{
+    width: 65%;
+    /* px로 지정 할 경우 부모와 상관없이 지정 */
+    /* %로 높이값을 지정 할 경우 부모의 높이가 지정되어 있지 않으면
+    높이가 지정이 안됨 */
+    height: 80px;
+    float: left;
+    
+}
+
+#login_form_btn{
+    
+    width: 35%;
+    height: 80px;
+   
+    float: left;
+   
+        
+    
+}
+
+#login_form_input>input{
+    width: 100%;
+    height: 40%;
+    
+    
+}
+
+#login_btn{
+    height: 65px;
+    width: 90px;
+    font-size: 17px;
+    font-weight: 900;
+    
+}
+
+
+#login_link>a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#login_link{
+    
+
+    width: 250px;
+    text-align: center;
+    line-height: 0;
+    
+}
+

@@ -1,0 +1,167 @@
+*{
+    
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+}
+
+.wrap header{
+    
+    width: 100%;
+    height: 120px;
+}
+
+header .logo{
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+   
+    
+}
+
+header .logo .logo_left{
+    
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+header .logo .logo_center{
+    float: left;
+    width: 800px;
+    
+    
+    
+}
+
+header nav{
+    width: 100%;
+    height: 20px;
+    background-color: darkgreen;
+}
+
+header nav ul{
+    padding: 0;
+}
+
+header nav ul li{
+    text-align: center;
+    float: left;
+    width: 25%;
+    height: 30px;
+    background-color: rgb(56, 172, 27);
+    
+    
+    
+
+}
+
+header nav ul li a{
+        
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        color: aliceblue;
+        line-height: 30px;
+        text-align: center;
+}
+
+header nav ul li a:hover{
+    background-color: rgb(1, 90, 1);
+    
+}
+
+
+/* 메인영역 -------------------------------------------*/
+
+
+main{
+    width: 100%;
+    height: 500px;
+    
+    margin-top:  10px;
+}
+ 
+
+
+#leftSide{
+    width: 150px;
+    height: 100%;
+    background-color: cadetblue;
+    float: left;
+    background-size: cover;
+}
+
+
+
+#mainContent{
+    width: 600px;
+    height: 100%;
+    
+    float: left;
+}
+
+#rightSide{
+    width: 250px;
+    height: 100%;
+   
+    float: left;
+    
+}
+
+main #leftSide img{
+    
+    width: 100%;
+    
+}
+
+
+main #rightSide img{
+    width: 100%;
+
+    margin-bottom: 10px;
+    padding-top: 20px; 
+}
+
+
+.wrap footer{
+    padding-top: 10px;
+    width: 100%;
+    height: 100px;
+    
+   
+}
+
+
+main #mainContent ul{
+    padding: 0px;
+    width: 600px;
+    height: 500px;
+    
+}
+
+main #mainContent ul li{
+    
+    width: 50%;
+    height: 50%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+
+main #mainContent ul li img{
+    
+    width: 100%;
+
+}
+
+main #rightSide #right_chat{
+    width: 100%;
+}
