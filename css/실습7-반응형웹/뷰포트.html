@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- name : 설정이름, content : 설정값 -->
+    <!-- 기기의 width 값으로 설정하고 배율을 지정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .em2{
+        font-size: 2em;
+    }
+
+    .rem2{
+        font-size: 2rem;
+    }
+
+    html{
+        /* 기본 글자 크기 변경 = 1rem*/
+        font-size: 10px;
+    }
+
+    .vw1{
+        font-size: 1vw;;
+    }
+
+    .vw2{
+        font-size: 2vw;;
+    }
+
+    .vh1{
+        font-size: 1vh;
+    }
+    
+    .vh2{
+        font-size: 2vh;
+    }
+
+    .vmin2{
+        font-size: 2vmin;
+    }
+
+    .vmax2{
+        font-size: 2vmax;
+    }
+
+</style>
+
+    
+
+
+</head>
+
+<body>
+
+    <p>
+        상대단위 : 고정되지 않고 어떤 기준에 따라
+                    유동적으로 바뀔수 있는 길이(em,rem,%,vw,vh) <br>
+        절대단위 : 항상 고정된 길이를 나타내는 단위 (px,pt)
+    </p>
+
+
+
+    <h2>viewport</h2>
+    현재 화면에 보여지는 영역
+
+    <p>
+    기기별 뷰포트가 다르므로 동일한 웹페이지라도
+    기기에 따른 배율 조정이 발생하여 화면의 크기가 다르게 보이는 현상
+    </p>
+
+    <h2>단위</h2>
+    브라우저의 기본 글자크기 (16px)
+
+    <h2>em과 rem</h2>
+    
+    font-size에 비례해서 결정되는 상대단위<br>
+    
+    em : 요소의 위치를 기준으로 1em <br>
+    rem : 최상위요소(html)의 글자크기를 기준으로 1rem
+
+    <div>
+        div 1depth
+        <div class="rem2">
+            div 2depth
+            <div class="rem2">
+                div 3depth
+                <div class="rem2">
+                div 4depth
+            </div >
+        
+         </div>
+        </div>
+    </div>
+
+    <h2>vw</h2>
+    화면 너비의 1/100 : 1vw
+    화면 높이의 1/100 : 1vw
+    <div class="vw1">1vw Ad aute excepteur eu proident. Non laboris commodo mollit velit sunt elit officia excepteur sit excepteur adipisicing ex. Aliquip voluptate esse ea magna. Sunt ex veniam amet voluptate elit cupidatat nulla elit exercitation cillum.
+
+Aute velit officia non exercitation qui elit in quis commodo mollit tempor ut culpa in. Non et pariatur ea id. Reprehenderit sunt ad do consequat enim esse id. Proident pariatur ad quis pariatur esse labore Lorem anim sunt veniam officia est aliqua. Laboris reprehenderit voluptate minim consectetur quis ex aute cupidatat laboris cillum. Mollit ea anim ipsum laboris occaecat esse deserunt ea veniam voluptate voluptate. Eiusmod nulla ut non quis do duis fugiat.</div>
+    
+        <br>
+<div class="vw2">2vw Esse cupidatat elit Lorem nisi proident nisi. Velit amet aliquip occaecat dolore eiusmod. Incididunt minim elit deserunt ipsum nostrud duis exercitation Lorem aliquip dolor laboris. Non pariatur duis non esse in sint labore ad ut occaecat aliquip nisi.
+
+Occaecat dolor anim minim nostrud dolor. Est nisi amet ex reprehenderit excepteur esse non laborum sit et do non esse. Non ipsum elit aliqua proident anim ullamco deserunt sit non dolore consectetur voluptate velit. Pariatur dolor cupidatat duis laborum deserunt et in esse amet minim officia amet et. Nostrud anim veniam consectetur incididunt non esse fugiat adipisicing ut dolor.
+
+<hr>
+
+<div class="vh1">vh1 Ad aute excepteur eu proident. Non laboris commodo mollit velit sunt elit officia excepteur sit excepteur adipisicing ex. Aliquip voluptate esse ea magna. Sunt ex veniam amet voluptate elit cupidatat nulla elit exercitation cillum.
+
+    Aute velit officia non exercitation qui elit in quis commodo mollit tempor ut culpa in. Non et pariatur ea id. Reprehenderit sunt ad do consequat enim esse id. Proident pariatur ad quis pariatur esse labore Lorem anim sunt veniam officia est aliqua. Laboris reprehenderit voluptate minim consectetur quis ex aute cupidatat laboris cillum. Mollit ea anim ipsum laboris occaecat esse deserunt ea veniam voluptate voluptate. Eiusmod nulla ut non quis do duis fugiat.</div>
+
+    <div class="vh">1vw Ad aute excepteur eu proident. Non laboris commodo mollit velit sunt elit officia excepteur sit excepteur adipisicing ex. Aliquip voluptate esse ea magna. Sunt ex veniam amet voluptate elit cupidatat nulla elit exercitation cillum.
+
+        Aute velit officia non exercitation qui elit in quis commodo mollit tempor ut culpa in. Non et pariatur ea id. Reprehenderit sunt ad do consequat enim esse id. Proident pariatur ad quis pariatur esse labore Lorem anim sunt veniam officia est aliqua. Laboris reprehenderit voluptate minim consectetur quis ex aute cupidatat laboris cillum. Mollit ea anim ipsum laboris occaecat esse deserunt ea veniam voluptate voluptate. Eiusmod nulla ut non quis do duis fugiat.</div>
+
+
+
+    </div>
+    <h2>vmin</h2>
+    
+    뷰포트 너비와 높이중 작은 값의 1%
+
+    <div class="vmin2">
+
+        Qui quis magna est amet magna culpa esse. Mollit ad ullamco sit ipsum amet tempor do sint ex proident nisi culpa. Voluptate aliqua consectetur do nisi in laboris amet Lorem duis. Ex laborum quis aute dolor voluptate est est et eu anim eiusmod.
+
+Pariatur pariatur pariatur mollit magna do ex occaecat ad in excepteur culpa. Aute aliquip incididunt laboris labore cupidatat ipsum laboris proident eu qui esse minim consequat eu. Ullamco dolor ad pariatur duis consectetur amet cillum. Reprehenderit est ad ut dolore ea in eu eiusmod non. Fugiat nulla culpa deserunt nulla sunt velit magna dolor esse ex. Nostrud consectetur cillum proident fugiat officia nisi cillum esse aute aute laborum. Nostrud nostrud dolor nisi velit dolore aliqua laboris minim nulla ut consectetur nostrud laborum.
+    </div>
+    <h2>vmax</h2>
+    뷰포트 너비와 높이중 큰 값의 1%
+
+
+
+    <h2>vmax</h2>
+    <div class="vmax2">
+        Incididunt sunt pariatur ea sint aliqua commodo commodo est sunt. Ea sunt in pariatur mollit Lorem proident mollit anim mollit nulla nulla proident pariatur. Nulla sint veniam ut sunt incididunt non.
+
+Ex duis sit deserunt aliqua proident magna et quis. Consequat nulla laborum ullamco in ipsum ut cillum. Culpa incididunt qui ut minim pariatur magna laborum. Magna aute ad est anim consequat eu pariatur dolore occaecat. Ipsum sunt nulla ea incididunt commodo magna aliquip cillum elit culpa. Aute consectetur do do esse sit dolor eu excepteur excepteur dolore est esse.
+    </div>
+
+
+</body>
+</html>
