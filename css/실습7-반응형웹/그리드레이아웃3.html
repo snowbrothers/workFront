@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드레이아웃3</title>
+
+    <style>
+    .wrapper{
+
+        width: 700px;
+        display: grid;
+
+        /* 컬럼의 갯수와 너비 지정 */
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: 1fr 2fr 1fr;
+        /* 행의 갯수와 너비 지정*/
+        grid-template-rows: repeat(3,80px);
+
+    }
+
+    /* 박스 기본 설정 */
+    .box{
+        
+        padding: 15px;
+        color: aliceblue;
+        font-weight: bold;
+        
+            text-align: center;
+        
+        
+        
+
+        
+    }
+
+    .box1{
+        background-color: skyblue;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        
+    }
+
+    .box2{
+       grid-row-start: 2;
+       grid-row-end: 4;
+        background-color: yellowgreen;
+    }
+
+    .box3{
+        background-color: orange;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .box5{
+        background-color: rgb(231, 211, 98);
+    }
+
+
+
+
+</style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>
+    
+</body>
+</html>

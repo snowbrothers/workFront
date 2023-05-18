@@ -1,0 +1,278 @@
+*{
+    margin: 0px ;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+  }
+
+  #container{
+
+    /* border: 1px solid blue; */
+    width: 1000px;
+    height: 700px;
+    margin: 0px auto;
+
+    position: relative;
+
+
+  }
+
+  /* header 영역 ------------------------------- */
+
+  header{
+    width: 1000px;
+    background-color: blue;
+    height: 100px;
+    
+  }
+
+  header h1{
+    padding: 20px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  header>#logo{
+    width: 230px;
+    height: 100px;
+    background-color: hsl(202, 85%, 42%);
+    float: left;
+  }
+
+  header>#logo>a{
+
+    color: white;
+    
+  }
+
+
+  nav{
+    background-color:hsl(202, 85%, 42%);
+    width: 77%;
+    /* float: right; */
+    position: absolute;
+    float: left;
+    height: 100px;
+    margin-left:230px;
+  
+    
+  }
+
+  nav #topMenu a{
+    
+    color: aliceblue;
+    padding: 30px;
+    
+  }
+
+
+
+  nav>#topMenu>li{
+    
+    display: inline-block;
+    padding-left: 30px;
+    
+    
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  nav>#topMenu>li>ul{
+    display: none;
+  }
+
+
+  #slideShow img{
+    width: 1000px;
+
+  }
+
+  #contents{
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    position: relative;
+  
+
+   
+
+  }
+
+  #contents #tabMenu{
+    width: 50%;
+    height: 300px;
+    /* background-color: yellowgreen; */
+    position: absolute;
+    float: left;
+    
+  }
+
+ #contents #tabMenu input[type=radio]{
+          display: none;
+      }
+
+
+      #contents #tabMenu ul{
+        width: 500px;
+        height: 300px;
+      }
+
+    
+      #gallery ul li{
+          display: inline;
+          list-style: none;
+      
+      }
+
+      #gallery ul {
+
+      padding-left: 0px;
+        }
+      
+
+      #tabMenu label{
+          /* border: 1px solid; */
+          display: inline-block;
+          padding: 20px;
+          margin: 0px;
+          font-weight: bold;
+          font-size: 1em;
+          color: #ccc;
+          height: 60px;
+      }
+
+
+      #tabMenu label:hover{
+        color: black
+        
+        
+    }
+
+      .tabContent{
+          display: none;
+          border-top: 1px solid #ccc;
+          padding: 10px 20px;
+          line-height: 2;
+          position: absolute;
+          left: 0px;
+          top: 59px;
+          width: 90%;
+
+      }
+
+
+
+      #tab1:checked~#notice
+      ,  #tab2:checked~#gallery{
+
+          display: block;
+
+      }
+   
+
+       /*  활성화된 (radio버튼이 체크된 상태) 탭 메뉴  */
+      #contents #tabMenu input:checked + label{
+          border:1px solid #ccc;
+          background-color: #eee;
+          color: brown;
+          
+      }
+
+
+      
+      #slides button{
+        display: none;
+      }
+
+
+
+      #gallery ul li img{
+          width: 130px;
+          height: 80px;
+          
+      }
+
+      #links{
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 300px;
+        
+        
+        float: right;
+        
+      }
+      
+      #links p{
+        color: black;
+      }
+
+      #links img{
+        width: 100px;
+        border-radius: 70%;
+      }
+
+
+      #links li{
+        display: inline-block;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      #links li p{
+        text-align: center;
+      }
+
+      footer{
+
+        position: relative;
+        border-top: 3px solid;
+        /* background-color: crimson; */
+      }
+
+      footer #bottomMenu{
+        width: 500px;
+      }
+
+      footer #bottomMenu ul li{
+        margin-top: 10px;
+        padding: 13px;
+        
+        display: inline-block;
+        border-right: 1px solid #8d8787;
+        
+      }
+
+      footer #bottomMenu ul{
+
+        width: 500px;
+        padding-left: 0px;
+      }
+
+      footer #bottomMenu ul li a{
+        
+        color: rgba(0, 0, 0, 0.644);
+        font-weight: bold;
+       
+        
+        
+      }
+
+      footer #sns{
+        position: absolute;
+        
+        padding-left: 880px;
+
+        
+
+        
+        
+          
+      }
+
+      footer #company{
+        color: #8d8787;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+      }
