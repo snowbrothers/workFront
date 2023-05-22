@@ -53,12 +53,18 @@
 
             var value = color.value
             var boxColor = getComputedStyle(div).backgroundColor;
+            console.log(value);
+            var r = parseInt(value.substr(1,2));
+            var g = parseInt(value.substr(3,2));
+            var b = parseInt(value.substr(5,2));
+            var rgbColor = `rgb(${r},${g}, ${b})`;
+            console.log(rgbColor);
             console.log('체크체크', boxColor);
 
             // 1. 선택된 색상과 박스의 색상이 같다면 메세지 처리
             // 2. 박스의 크기를 200*200 으로 변경
 
-            if (boxColor == value) {
+            if (boxColor == rgbColor) {
                 alert('색상이 같습니다. 다시 선택해주세요.')
 
             } else {
