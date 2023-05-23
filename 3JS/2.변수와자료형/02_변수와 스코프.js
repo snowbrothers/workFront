@@ -133,6 +133,17 @@ window.onload = function(){
     var num = 10;
     console.log(num);
 
+
+    /*
+
+        let 으로 선언 시 num1 을 선언문이 나오기 전에 사용불가
+        let, const도 호이스팅이 되지만
+        Temporal Dead Zone(TDZ)에 위치
+        TDZ : 선언 전에 변수를 사용하는 것을 비 허용하는 개념상의 공간
+        
+    */
+
+
     // let, const 중복선언 불가
     let num1 = 0;
     // let num1 = 0; ERR

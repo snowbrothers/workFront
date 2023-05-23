@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+    <button onclick="alert('조금씩조금씩')">click</button>
+
+    <button onclick="console.log('콘솔창출력','콘솔창에 로그를 남겨줍니다.')">콘솔창 출력</button>
+
+
+    <hr>
+
+    <button onclick="btnClick()">알림창 출력</button>
+    <button id="btn1">console 출력</button>
+
+    <script src="0522_study.js">
+
+        var btn1 = document.getElementById('btn1');
+
+        console.log('btn1 확인', btn1);
+
+
+        function btnClick(){
+            alert('click')
+        }
+
+
+    </script>
+
+
+
+    <h3>외부에서 작성 후 출력</h3>
+
+    <button onclick="external()">한다출력.</button>
+
+
+    <button onclick="windowConfirm()">예/아니오</button>
+
+    <script>
+
+        function windowConfirm(){
+            var res = confirm('집에 가고 싶은가요?')
+
+            if(res){
+                alert ('가세요');
+            } else {
+                alert ('가지마세요');
+            }
+
+        }
+
+    </script>
+    
+    <br><br><br><br>
+    <button onclick="promptCheck()">나이체크</button>
+
+    <script>
+        
+        
+        
+        function promptCheck(){
+
+            var age = prompt('나이를 입력해주세요')
+
+            // check = age < 20? '청소년' : '성인'
+
+            var check;
+
+            if(age < 20){
+
+                check = '청소년'
+            
+            }else if(age < 30){
+            
+                check = '20대'
+            
+            }else if(age < 40){
+            
+                check = '30대'
+            
+            }else if(age < 50){
+            
+                check = '40대'
+            
+            }else {
+            
+                check = '어르신'
+            };
+
+            console.log(age);
+
+            if(age!=null & age.trim()!=''){
+
+                alert(`${age}세, ${check} 이시군요 환영합니다.`)
+            }
+
+
+        }
+        
+
+        
+
+    </script>
+
+    <script>
+        document.write('브라우저 출력')
+    </script>
+
+
+
+</body>
+</html>
