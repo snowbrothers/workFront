@@ -188,7 +188,7 @@
     <p style="border:1px solid red;" id="print4">이 부분에 정답이 출력 될 수 있도록 하세요</p>
 	<button onclick="arrayTest3();">처리 및 출력</button>  
     
-    <!-- <script>
+    <script>
 
         // split (문자를 감싸는 구분자)
         let stringla4 = document.getElementById('stringla4').innerText.split(' ');
@@ -198,12 +198,26 @@
             // shift, unshift 
 
             let remove = document.getElementById('remove').value;
-            let add = documnet.getElementById('add').value;
+            let add = document.getElementById('add').value;
+
+            let removecheck = stringla4.indexOf(remove);
+
+            if(removecheck !== -1){
+
+                stringla4.splice(removecheck, 1);
+            }
+
+            stringla4.push(add);
+
+            let print = document.getElementById('print4');
+
+            print.innerHTML = stringla4;
+            
         }
 
-    </script> -->
+    </script>
 
-    <script>
+    <!-- <script>
     let stringla4 = document.getElementById('stringla4').innerText.split(' ');
     function arrayTest3(){
     
@@ -235,7 +249,7 @@
     // // Print the result
     // document.getElementById('print4').innerText = stringla4.join(' ');
 }
-    </script>
+    </script> -->
     
 </body>
 </html>
