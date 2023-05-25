@@ -9,6 +9,7 @@ window.onload = function () {
 
         // area.innerHTML = '삐용';
 
+        // 자료형 변수이름 = new Array();
         let array1 = new Array(); // []
         let array2 = new Array(3); // [빈공간 x 3]
 
@@ -44,6 +45,11 @@ window.onload = function () {
         array1[4] = '딸기';
 
         console.log('======================= ', array1);
+
+        // ``안의 [] 가 무슨 의미가 있는 것이 아니라 문자열로 출력된다. 그러므로
+        // [${array1}] 는 배열의 의미의 []로 감싸진 것이 아니라,
+        // 문자열 [] 로 감싸진 array1 의 배열 요소들의 집합이다.
+
         area.innerHTML = `array1(빈배열) 에 값 대입 : [${array1}] <br>`
             + `array1.length : ${array1.length} <br><br>`
     });
@@ -89,15 +95,18 @@ window.onload = function () {
     // 3) join() 배열의 요소들을 결합하여 문자열로 반환
     // 매개값으로 구분자를 입력할 수 있다.
     let btn4 = document.getElementById('btn4');
-    let area4 = document.getElementById('area4')
+    let area4 = document.getElementById('area4');
 
     btn4.addEventListener('click', function(){
 
         area4.innerHTML = '실행완료';
+        // 배열 선언
         let array = ['서울', '강원', '경기'];
         
         area4.innerHTML = `array : [${array}] <br>`
+        // .toString() : 배열을 문자열로 반환하는 메서드.
         area4.innerHTML += `arary.toString : [${array.toString()}]<br>`
+        
         // 배열 -> 문자열
         area4.innerHTML += `arary.join : [${array.join('/')}]<br>`
         area4.innerHTML += `typeof(arary.join('/') : [${typeof(array.join('/'))}]<br>`

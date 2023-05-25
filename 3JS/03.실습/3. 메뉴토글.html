@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+  <link rel="stylesheet" href="css/solution-2.css">
+</head>
+<body>
+  <button id="bttn">&#9776;</button>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#">Javascript</a></li>
+      <li><a href="#">Typescript</a></li>
+      <li><a href="#">Node.js</a></li>
+    </ul>
+  </nav>
+
+
+  <!--
+
+    nav.classList.add('active')
+    button.classList.add('active')
+
+
+    nav.classList.toggle('active')
+    bttn.classList.toggle('active')
+
+  --> 
+<!-- 
+  <script>
+
+    // nav.addEventListener('click',function(){
+
+    //   nav.classList.toggle('active');
+
+    // });
+      
+
+    bttn.addEventListener('click',function(){
+
+      bttn.classList.toggle('active');
+      
+      nav.classList.toggle('active');
+      
+      // nav 에 mouseover >>  마우스가 올려져 잇으면 display none;
+      // mouseout 마우스 내리면 초기화 
+      
+      
+      
+     
+
+});
+    
+
+  </script> -->
+
+
+  <script>
+    let bttn = document.getElementById('bttn');
+let nav = document.getElementById('nav');
+
+    bttn.addEventListener('click', function() {
+    bttn.classList.toggle('active');
+    nav.classList.toggle('active');
+    bttn.style.display = 'none';
+  });
+
+    nav.addEventListener('mouseout', function() {
+      bttn.classList.remove('active');
+      nav.classList.remove('active');
+      bttn.style.display = 'block';
+
+});
+  </script>
+    
+  
+</body>
+</html>

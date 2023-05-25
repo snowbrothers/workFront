@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="06.이벤트.js"></script>
+    <style>
+        pre{
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>웹 브라우저나 사용자가 행하는 동작</p>
+    <p>웹문서 영역안에서 이루어지는 동작</p>
+
+
+    <!-- 크게 4가지 종류로 나뉜다. -->
+    <ul>
+
+
+        <li>마우스이벤트</li>
+        <li>키보드이벤트</li>
+        <li>문서로딩이벤트</li>
+        <li>폼이벤트</li>
+
+    </ul>
+
+
+    <h2>1. 이벤트 모델의 종류</h2>
+    <h3>1 ) 고전 이벤트 모델</h3>
+
+    <pre>
+        요소 객체가 가지고 있는 이벤트 속성에 이벤트 핸들러를 연결하는 방법이다.
+        이벤트 객체를 제거할 수 있는데 제거하고자 한다면 이벤트 속성값에 null을 대입하면 된다.
+
+        - 중복해서 이벤트를 작성 할 수 없다.
+    </pre>
+
+    <button id="btn1">클릭</button>
+
+    <h3>2 ) 인라인 이벤트 모델</h3>
+
+    <button onclick="alert('추워요...')">클릭</button>
+
+    <h3>3 ) 표준 이벤트 모델</h3>
+
+    <pre>
+        w3c 에서 공식으로 지정한 이벤트 모델
+        한번에 여러개의 이벤트 핸들러 설정이 가능하다.
+    </pre>
+
+    <button id="btn3">클릭</button>
+
+    <h2>2. 이벤트가 발생한 요소 객체에 접근하는 방법</h2>
+    <pre>
+        이벤트가 발생한 요소 객체는 내부적으로 
+        이벤트 발생 정보를 담고 잇는 객체를 매개변수로 전달한다.
+
+        이벤트 객체를 통해서 해당 요소 객체에 접근하고
+        콜백 함수의 종류에 따라 this 로 접근이 가능하다.
+        
+        콜백함수 : 다른코드의 인수로서 넘겨주는 실행가능한 코드
+    </pre>
+
+
+    <button id="btn4">고전 이벤트 방식</button>
+    <button onclick="test()">인라인 이벤트 방식</button>
+    <button id="btn5">표준 이벤트 방식</button>
+
+    <h2>3. 태그별 기본적으로 가지고 있는 이벤트 제거</h2>
+
+
+    <pre>
+
+        기본 이벤트를 가지고 있는 요소
+
+        a : 클릭 시 href 속성에 제시되어 있는 페이지를 요청하는 기본 이벤트 보유
+
+        submit : 클릭 시 입력 양식 ㅊ제출 후 페이지를 다시 로딩하는 기본 이벤트 보유 
+
+        기본 이벤트가 있는 요소에 onclick 이벤트를 설정하면
+        이 코드가 우선적으로 먼저 실행되고 그 다음에 기본 이벤트가 실행 된다.
+
+        태그에 기본적으로 설정되어 있는 이벤트를제거하기 위해서는
+        이벤트 핸들러의 return 값을 false 로 하면 된다.
+
+        1. 이벤트 핸들러  실행
+             <b style ="color :red;">!!! 이벤트 핸들러의 반환값이 false 이면 기본 이벤트를 실행하지 않는다 !!!</b>
+
+        2. 기본 이벤트 실행
+
+            <a href="https://www.naver.com/">네이버로 이동</a>
+            <a href="https://www.naver.com/" onclick="alert('네이버로 바로가기')">네이버로 이동</a>
+            <a href="https://www.naver.com/" onclick="alert('네이버로 바로가기'); return false">네이버로 이동</a>
+
+    </pre>
+
+
+    <h3>1 ) 기본 이벤트 제거 1</h3>
+
+    <form action="">
+        <label for="pass1">비밀번호 : </label>
+        <input type="password" name="pass1" id="pass1"><br>
+        <label for="pass2">비밀번호 확인 : </label>
+        <input type="password" name="pass2" id="pass2"><br><br>
+
+        <!-- submit 버튼을 누르면 서버에 전달 -->
+        <input type="submit" onclick="return passwordCheck()" value="제출">
+
+    </form>
+
+
+    <h3>2 ) 기본 이벤트 제거 2</h3>
+
+    <form action="">
+
+
+        <label for="userId">아이디 : </label>
+        <input type="text" name="userId" id="userId"><br>
+        영문자, 숫자로만 총 ~ 12자 사이로 입력 해주세요. <br><br>
+
+        <input type="submit" value="회원가입" id="submit">
+
+
+    </form>
+
+    
+
+    
+
+
+
+</body>
+</html>

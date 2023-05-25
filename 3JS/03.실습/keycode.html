@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>키 코드</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    #result {
+      text-align: center;
+      font-weight:bold;
+      font-size:1.5em;
+      color:crimson;
+    }
+  </style>
+</head>
+<body>
+  <h1>키보드의 아무 키나 눌러보세요</h1>
+
+  <div id="result"></div>
+
+  <script>
+
+    // // getElementsByTagName : 노드리스트가 반환되므로 몇번째 요소인지 명확하게 알려줄 필요가 있음
+    // let body = document.getElementsByTagName('body')[0];
+      let body = document.querySelector('body');
+
+
+    //  하나의 요소에 이벤트를 적요
+     body.addEventListener('keydown', function(e){
+          
+      // Keycode 13 : Enter 
+
+             console.log(e.code);
+             console.log(e.key);
+
+             result.innerHTML = e.key;
+            
+    });
+
+
+
+//     // 연결해서 출력
+//     // let body = document.getElementsByTagName('body')[0];
+//     // let result = document.getElementById('result');
+//     // let keys = [];
+
+//     // body.addEventListener('keydown', function(e){
+//     // console.log(e.code);
+//     // console.log(e.key);
+
+//     // keys.push(e.key);
+//     // result.innerHTML = keys.join('');
+// });
+    
+
+  </script>
+</body>
+</html>
