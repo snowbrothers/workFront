@@ -10,6 +10,7 @@ window.onload = function(){
             // 내부적으로 이벤트 발생 정보를 담고 있는 객체를 매개변수로 전달한다.
 
             // 이벤트의 발생정보를 확인하고 싶다면 매개변수를 입력
+            
     btn1.onclick = function(e){
         console.log('고전 이벤트 모델', this)
     
