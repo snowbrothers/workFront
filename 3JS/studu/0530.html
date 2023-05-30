@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        list-style: none;
+    }
+</style>
+
+<body>
+
+    <div id="result"></div>
+
+    
+    <h1>부산광역시_승용차요일제 할인 가맹점 정보</h1>
+    <script>
+        let url = 'https://apis.data.go.kr/6260000/BusanPsngrCardyInfoService/getPsngrCardyInfo?serviceKey=5%2BZ08pGAQa%2B%2FyYPyEmAcNCBDdikEtIEfedbmm7%2BOUSzXvXShj0wk70uQUpirtxLl%2B8nNvqfNWRK5L9Up3K1iOA%3D%3D&pageNo=1&numOfRows=10&resultType=json';
+    
+    
+        let xhr = new XMLHttpRequest();
+        xhr.open('get',url);
+        xhr.send();
+
+        xhr.onreadystatechange = function(){
+
+            let resDiv = document.querySelector('#result')
+
+            if(xhr.readyState === 4 && xhr.status == 200){
+
+                console.log(xhr.responseText);
+
+                let jsObj = JSON.parse(xhr.responseText);
+                console.log('객체변환확인', jsObj);
+
+                let itemArr = jsObj.getPsngrCardyInfo.body.items.item;
+
+                
+                resDiv.innerHTML +='<ul>'
+                for(item of itemArr){
+
+                    resDiv.innerHTML +=
+                    
+                        `<li>
+
+                            <p>${'구분코드 : '+item.gubunCode}</p>
+
+                            <p>${'구분명 : '+item.gubunName}</p>
+
+                            <p>${'상호 : '+item.firmName}</p>
+
+                            <p>${'tel : '+item.tel}</p>
+
+                            <p>${'할인내역 : '+item.benefitContent}</p>
+
+                            </li>
+
+                            <hr>
+                
+                    `;
+                    
+                    
+                    
+                     resDiv.innerHTML +='</ul>'
+
+
+                    
+
+
+                }
+
+                
+
+
+
+
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
