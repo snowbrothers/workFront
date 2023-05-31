@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       *{
+            list-style: none;
+        }
+
+        li{
+            margin: 10px;
+        }
+        input{
+            height: 30px;
+        }
+        
+       
+
+    </style>
+
+    <script src="5.AJAX-공공데이터활용_Form.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5186c88f474f0772453a8df7fa4047d4"></script>
+</head>
+<body>
+    <div id="map" style="width:100%;height:300px;"></div>
+    <form id="campForm">
+        <ul>
+        <div class="hidden">
+            <li><label for="">serviceKey</label>  <input type="text" name="serviceKey" id="" value="5%2BZ08pGAQa%2B%2FyYPyEmAcNCBDdikEtIEfedbmm7%2BOUSzXvXShj0wk70uQUpirtxLl%2B8nNvqfNWRK5L9Up3K1iOA%3D%3D"> 인증키(서비스키)</li>
+            <li><label for="">MobileOS </label> <input type="text"  name="MobileOS" id="" value="ETC"> OS 구분 : IOS(아이폰), AND (안드로이드),  WIN (윈도우폰), ETC(기타)</li>
+            <li><label for="">MobileApp </label> <input type="text" name="MobileApp" id="" value="AppTest"> 서비스명(어플명)</li>
+            <li><label for="">mapX </label> <input type="text"  name="mapX" id="X" value="">	경도 : GPS X좌표(WGS84 경도 좌표)</li>
+            <li><label for="">mapY </label> <input type="text" name="mapY" id="Y" value=""> 위도 : GPS Y좌표(WGS84 위도 좌표)</li>
+            <li><label for="">_type </label> <input type="text" name="_type" id="" value="json"> 타입</li>
+
+
+
+        </div>
+        
+   <li><label for="">numOfRows</label>  <input type="text" name="numOfRows" id="" value="10" > 한페이지결과수</li>
+   
+   <li><label for="">pageNo </label> <input type="text" name="pageNo" id="" value="1"> 페이지번호</li>
+   <li><label for="">radius </label> <input type="text" name="radius" id="" value="20000"> 거리 반경 : 거리 반경(단위:m) ,Max값 20000m=20Km</li>
+
+   <!-- <li><label for="">_type </label> <input type="text" name="_type" id="" value="json"> 타입</li> -->
+</ul>
+
+<br><button id="btn">click</button>
+<!-- <button id="getLocation">현재위치버튼</button> -->
+
+<div id="result"></div>
+</form>
+</body>
+</html>
