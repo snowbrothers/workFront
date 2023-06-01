@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        *{
+            
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        
+    </style>
+    
+</head>
+<body>
+
+    <!--
+
+        이벤트가 발생시 실행되는 함수를 작성 하시오
+
+        1) id가 btn인 요소가 클릭되면 testJson함수를 실행 합니다.
+        --------- 함수명 : testJson ---------
+        2) 보기의 학생정보를 JSON형식의 문자열로 생성하시오
+        3) 문자열을 JavaScript Object로 변환 후 console창에 출력 하시오
+        4) 변환된 Object를 JSON문자열로 변환후 console창에 출력 하시오
+        
+        name : 고경희
+        major : 컴퓨터공학
+        grade : 2
+        phone : 010-1111-2222
+
+        name : 홍길동
+        major : 컴퓨터공학
+        grade : 2
+        phone : 010-2222-3333
+
+    -->
+
+
+    <button id="btn">실행하기</button>
+
+    <script>
+        
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', testJson);
+
+
+        
+        function testJson(){
+
+            var jsStr1 =  {
+
+                name: "고경희",
+                major: "컴퓨터공학",
+                grade: "2",
+                phone: "010-1111-2222"
+
+                };
+
+                var jsStr2 = {
+
+                name: "홍길동",
+                major: "컴퓨터공학",
+                grade: "2",
+                phone: "010-2222-3333"
+
+                };
+
+
+                var jsonString1 = JSON.stringify(jsStr1);
+                var jsonString2 = JSON.stringify(jsStr2);
+        
+
+                console.log("JavaScript Object:");
+                console.log(jsStr1);
+                console.log(jsStr2);
+
+
+                console.log("JSON 문자열:");
+                console.log(jsonString1);
+                console.log(jsonString2);
+
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
